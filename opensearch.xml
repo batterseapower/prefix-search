@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+        <ShortName>Prefix Search</ShortName>
+        <Description>Prefix Search</Description>
+        <Image height="16" width="16" type="image/x-icon">http://prefix-search.omega-prime.co.uk/favicon.ico</Image>
+        <Url type="text/html" method="get" template="http://prefix-search.omega-prime.co.uk/search.php?query={searchTerms}" />
+        <!--<moz:SearchForm>http://en.wikipedia.org/wiki/Special:Search</moz:SearchForm>-->
+</OpenSearchDescription>
