@@ -44,19 +44,26 @@ if (!$query) {
       <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="Prefix Search" />
    </head>
    <body>
-      <h1>Prefix Search</h1>
+      <h1><a href="index.htm">Prefix Search</a></h1>
       
       <table>
          <tr>
-            <td>Prefix</td>
-            <td>Template</td>
+            <th>Prefix</th>
+            <th>Template</th>
          </tr>
 <?php
     foreach ($providers as $provider) {
         $provider_strings = $provider[1];
-        $provider_template = $provider[2];
-        foreach ($provider_strings as $provider_string) {
-            echo "<tr><td>{ $provider_string }</td><td>{ $provider_template }</td></tr>"
+        $encoded_provider_template = htmlentities($provider[2]);
+        
+        foreach ($provider_strings as $i => $provider_string) {
+            $encoded_provider_string = htmlentities($provider_string);
+            echo "<tr><td>$encoded_provider_string</td>";
+            if ($i == 0) {
+                $provider_strings_count = sizeof($provider_strings);
+                echo "<td rowspan=\"$provider_strings_count\">$encoded_provider_template</td>";
+            }
+            echo "</tr>";
         }
     }
 ?>
