@@ -4,5 +4,7 @@
         <Description>Prefix Search</Description>
         <Image height="16" width="16" type="image/x-icon">http://prefix-search.omega-prime.co.uk/favicon.ico</Image>
         <Url type="text/html" method="get" template="http://prefix-search.omega-prime.co.uk/search.php?query={searchTerms}" />
-        <!--<moz:SearchForm>http://en.wikipedia.org/wiki/Special:Search</moz:SearchForm>-->
+        <!-- I'm going to cheat and use Google suggestions (since that is the default prefix, after all) -->
+        <Url type="application/x-suggestions+json" template="http://suggestqueries.google.com/complete/search?hl=en&amp;q={searchTerms}"/>
+        <moz:SearchForm>http://prefix-search.omega-prime.co.uk</moz:SearchForm>
 </OpenSearchDescription>
