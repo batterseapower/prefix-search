@@ -35,31 +35,62 @@ $providers = array(
 # Find user query
 $query = $_GET['query'];
 
-# Parse query term into initial subquery and actual query text
-if (preg_match("/^([^\\s]+)\\s+(.*)$/", $query, $matches)) {
-   # Extract relevant stuff from the regex gubbins
-   $provider_string = strtolower($matches[1]);
-   $subquery = $matches[2];
+if (!$query) {
+    # If we didn't get a query, show the user what they COULD have done
+?>
+<html>
+   <head>
+      <title>Prefix Search</title>
+      <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="Prefix Search" />
+   </head>
+   <body>
+      <h1>Prefix Search</h1>
+      
+      <table>
+         <tr>
+            <td>Prefix</td>
+            <td>Template</td>
+         </tr>
+<?php
+    foreach ($providers as $provider) {
+        $provider_strings = $provider[1];
+        $provider_template = $provider[2];
+        foreach ($provider_strings as $provider_string) {
+            echo "<tr><td>{ $provider_string }</td><td>{ $provider_template }</td></tr>"
+        }
+    }
+?>
+      </table>
+   </body>
+</html>
+<?php
+} else {
+    # Parse query term into initial subquery and actual query text
+    if (preg_match("/^([^\\s]+)\\s+(.*)$/", $query, $matches)) {
+       # Extract relevant stuff from the regex gubbins
+       $provider_string = strtolower($matches[1]);
+       $subquery = $matches[2];
 
-   # Find a matching template
-   $template = NULL;
-   foreach ($providers as $i => $provider) {
-      $provider_strings = $provider[1];
-      $provider_template = $provider[2];
-      if (is_numeric(array_search($provider_string, $provider_strings))) {
-         $template = $provider_template;
-         break;
-      }
-   }
+       # Find a matching template
+       $template = NULL;
+       foreach ($providers as $provider) {
+          $provider_strings = $provider[1];
+          $provider_template = $provider[2];
+          if (is_numeric(array_search($provider_string, $provider_strings))) {
+             $template = $provider_template;
+             break;
+          }
+       }
    
-   # Redirect immediately if we recognised the template
-   if ($template) {
-      http_redirect(str_replace("{searchTerms}", urlencode($subquery), $template));
-      return;
-   }
-}
+       # Redirect immediately if we recognised the template
+       if ($template) {
+          http_redirect(str_replace("{searchTerms}", urlencode($subquery), $template));
+          return;
+       }
+    }
 
-# Default redirection
-http_redirect("http://www.google.com/search?q=" . urlencode($query));
+    # Default redirection
+    http_redirect("http://www.google.com/search?q=" . urlencode($query));
+}
 
 ?>

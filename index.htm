@@ -1,10 +1,24 @@
 <html>
    <head>
       <title>Prefix Search</title>
-      <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Prefix Search" />
+      <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="Prefix Search" />
    </head>
    <body>
       <h1>Prefix Search</h1>
-      <p>This page is only here so you can get to the OpenSearch Description file.</p>
+      
+      <p>I am a simple search provider that easily lets you use multiple different search
+         engines by adding a prefix to your searches. For example, you could search for
+         <a href="search.php?query=fight+club"><tt>rt Fight Club</tt></a> to run a search
+         for that film on <a href="http://www.rottentomatoes.com">Rotten Tomatoes</a>.</p>
+         
+      <p>A full list of prefixes you can use is available by searching for
+         <a href="search.php">nothing at all</a>.</p>
+      
+      <p>For maximum fun add me to your browser search box!</p>
+      
+      <form action="search.php">
+          <input type="text" name="query" />
+          <input type="submit" />
+      </form>
    </body>
 </html>
