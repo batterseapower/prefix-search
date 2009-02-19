@@ -19,6 +19,7 @@ $providers = array(
    array("Holumbus",array("holumbus"),"http://www.holumbus.org/hayoo/hayoo.html?query={searchTerms}"),
    array("Hollywood",array("hollywood"),"http://www.hollywood.com/search.aspx?s={searchTerms}"),
    array("IMDB",array("imdb"),"http://www.imdb.com/find?s=all&q={searchTerms}&x=0&y=0"),
+   array("JavaDocs",array("jd", "javadocs"), "http://javadocs.org/{searchTerms}/?t={searchTerms}"),
    array("Live.com",array("live"),"http://search.live.com/results.aspx?q={searchTerms}&go=&form=QBLH"),
    array("Lonely Planet",array("lonelyplanet"),"http://search.lonelyplanet.com/search.do?Ntt={searchTerms}&x=0&y=0"),
    array("MarketWatch",array("marketwatch"),"http://www.marketwatch.com/search/?value={searchTerms}"),
@@ -30,7 +31,8 @@ $providers = array(
    array("Weather.com",array("weather"),"http://www.weather.com/search/enhancedlocalsearch?whatprefs=&what=WeatherLocalUndeclared&lswe={searchTerms}&lswa=WeatherLocalUndeclared&from=searchbox&where={searchTerms}&wxGoButton=GO"),
    array("Wikipedia",array("wikipedia", "wp"),"http://en.wikipedia.org/wiki/Special:Search?search={searchTerms}&fulltext=Search"),
    array("Yahoo",array("yahoo"),"http://search.yahoo.com/search?p={searchTerms}&ei=UTF-8&fr=moz2"),
-   array("Yahoo Answers",array("yahooanswers"),"http://answers.yahoo.com/search/search_result;_ylv=3?p={searchTerms}"));
+   array("Yahoo Answers",array("yahooanswers"),"http://answers.yahoo.com/search/search_result;_ylv=3?p={searchTerms}"),
+   array("YellowBridge", array("yb", "yellowbridge"),"http://www.yellowbridge.com/chinese/wordsearch.php?searchMode=C&select=anywhere&word={searchTerms}"));
 
 # Find user query
 $query = $_GET['query'];
