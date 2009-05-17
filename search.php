@@ -26,6 +26,7 @@ $providers = array(
    array("Merriam-Webster",array("merriamwebster", "dictionary", "dict"),"http://www.merriam-webster.com/dictionary/{searchTerms}"),
    array("Nciku",array("nciku", "zw"),"http://www.nciku.com/search/all/{searchTerms}"),
    array("Rotten Tomatoes",array("rottentomatoes", "rt"),"http://www.rottentomatoes.com/search/full_search.php?search={searchTerms}"),
+   array("Reviewing The Kanji",array("kanji", "rtk"),"http://kanji.koohii.com/study/index.php?search={searchTerms}"),
    array("Technorati",array("technorati"),"http://technorati.com/search/{searchTerms}?authority=a4&language=en"),
    array("USA Today",array("usatoday"),"http://search.usatoday.com/search/search.aspx?qt=news%2Cyss%2Cweb%2Crel%2Cimg%2Ctop10%2Ckmatch&nr=5&s=sb&kw={searchTerms}"),
    array("Weather.com",array("weather"),"http://www.weather.com/search/enhancedlocalsearch?whatprefs=&what=WeatherLocalUndeclared&lswe={searchTerms}&lswa=WeatherLocalUndeclared&from=searchbox&where={searchTerms}&wxGoButton=GO"),
