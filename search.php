@@ -37,8 +37,23 @@ $providers = array(
    array("YellowBridge",array("yb", "yellowbridge"),"http://www.yellowbridge.com/chinese/wordsearch.php?searchMode=C&select=anywhere&word={searchTerms}"),
    array("YouTube",array("youtube", "yt"),"http://www.youtube.com/results?search_type=&search_query={searchTerms}&aq=f"));
 
-# Find user query
-$query = $_GET['query'];
+# Utility function to remove magic quotes if necessary
+if (get_magic_quotes_gpc()) {
+    function strip_magic_quotes($value) {
+        $value = is_array($value) ?
+                    array_map('strip_magic_quotes', $value) :
+                    stripslashes($value);
+
+        return $value;
+    }
+} else {
+    function strip_magic_quotes($value) {
+        return $value;
+    }
+}
+
+# Find user query, without any magic quotes
+$query = strip_magic_quotes($_GET['query']);
 
 if (!$query) {
     # If we didn't get a query, show the user what they COULD have done
