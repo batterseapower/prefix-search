@@ -25,6 +25,7 @@ $providers = array(
    array("MarketWatch",array("marketwatch"),"http://www.marketwatch.com/search/?value={searchTerms}"),
    array("Merriam-Webster",array("merriamwebster", "dictionary", "dict"),"http://www.merriam-webster.com/dictionary/{searchTerms}"),
    array("Nciku",array("nciku", "zw"),"http://www.nciku.com/search/all/{searchTerms}"),
+   array("Pydoc",array("pydoc", "pyd", "py"),"http://pydoc.org/2.5.1/search.cgi?key={searchTerms}"),
    array("Rotten Tomatoes",array("rottentomatoes", "rt"),"http://www.rottentomatoes.com/search/full_search.php?search={searchTerms}"),
    array("Reviewing The Kanji",array("kanji", "rtk"),"http://kanji.koohii.com/study/index.php?search={searchTerms}"),
    array("Technorati",array("technorati"),"http://technorati.com/search/{searchTerms}?authority=a4&language=en"),
@@ -33,7 +34,8 @@ $providers = array(
    array("Wikipedia",array("wikipedia", "wp"),"http://en.wikipedia.org/wiki/Special:Search?search={searchTerms}&fulltext=Search"),
    array("Yahoo",array("yahoo"),"http://search.yahoo.com/search?p={searchTerms}&ei=UTF-8&fr=moz2"),
    array("Yahoo Answers",array("yahooanswers"),"http://answers.yahoo.com/search/search_result;_ylv=3?p={searchTerms}"),
-   array("YellowBridge", array("yb", "yellowbridge"),"http://www.yellowbridge.com/chinese/wordsearch.php?searchMode=C&select=anywhere&word={searchTerms}"));
+   array("YellowBridge",array("yb", "yellowbridge"),"http://www.yellowbridge.com/chinese/wordsearch.php?searchMode=C&select=anywhere&word={searchTerms}"),
+   array("YouTube",array("youtube", "yt"),"http://www.youtube.com/results?search_type=&search_query={searchTerms}&aq=f"));
 
 # Find user query
 $query = $_GET['query'];
