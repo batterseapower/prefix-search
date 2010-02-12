@@ -16,6 +16,7 @@ $providers = array(
    #array("Expedia",array("expedia"),"http://search.expedia.com/socialsearch/query?q={searchTerms}&x=0&y=0&cn=expedia&cc=www&st=1&bn_f=&adv=0"),
    #array("Flickr",array("flickr"),"http://www.flickr.com/search/?q={searchTerms}"),
    array("Google",array("google", "goog", "g"),"http://www.google.com/search?q={searchTerms}"),
+   array("Google.cn",array("cn"),"http://www.google.cn/search?hl=zh-CN&source=hp&q={searchTerms}&aq=f&oq="),
    array("Hackage",array("hackage", "hack"),"http://www.google.co.uk/search?hl=en&as_sitesearch=hackage.haskell.org/package&as_q={searchTerms}"),
    array("Hoogle",array("hoogle", "hoog"),"http://haskell.org/hoogle/?hoogle={searchTerms}"),
    array("Holumbus",array("holumbus"),"http://www.holumbus.org/hayoo/hayoo.html?query={searchTerms}"),
