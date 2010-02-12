@@ -6,6 +6,7 @@ $providers = array(
    #array("Answers",array("answers"),"http://www.answers.com/main/ntquery?s={searchTerms}&gwp=13"),
    #array("AOL Search",array("aol"),"http://search.aol.com/aol/search?invocationType=searchbox.webhome&query={searchTerms}"),
    #array("Ask.com",array("ask"),"http://uk.ask.com/web?q={searchTerms}&search=search&dm=all&qsrc=0&o=312&l=dir&siteid="),
+   array("Baidu",array("baidu", "bd"),"http://www.baidu.com/s?wd={searchTerms}"),
    #array("BBC News",array("bbc"),"http://search.bbc.co.uk/cgi-bin/search/results.pl?tab=ns&q={searchTerms}&uri=%2F&scope=all"),
    #array("Business.com",array("business"),"http://www.business.com/search/rslt_default.asp?vt=all&type=web&query={searchTerms}&x=0&y=0"),
    #array("Creative Commons",array("creativecommons", "cc"),"http://search.creativecommons.org/?q={searchTerms}&sourceid=Mozilla-search"),
