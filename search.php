@@ -27,6 +27,7 @@ $providers = array(
    #array("Lonely Planet",array("lonelyplanet"),"http://search.lonelyplanet.com/search.do?Ntt={searchTerms}&x=0&y=0"),
    array("MarketWatch",array("marketwatch"),"http://www.marketwatch.com/search/?value={searchTerms}"),
    array("Merriam-Webster",array("merriamwebster", "dictionary", "dict"),"http://www.merriam-webster.com/dictionary/{searchTerms}"),
+   array("Metacritic",array("metacritic"),"http://www.metacritic.com/search/process?sort=relevance&termtype=all&ts={searchTerms}&ty=0&button=search"),
    array("Nciku",array("nciku", "zw"),"http://www.nciku.com/search/all/{searchTerms}"),
    array("Pydoc",array("pydoc", "pyd", "py"),"http://pydoc.org/2.5.1/search.cgi?key={searchTerms}"),
    array("Rotten Tomatoes",array("rottentomatoes", "rt"),"http://www.rottentomatoes.com/search/full_search.php?search={searchTerms}"),
