@@ -22,7 +22,7 @@ $providers = array(
    array("Holumbus",array("holumbus"),"http://www.holumbus.org/hayoo/hayoo.html?query={searchTerms}"),
    #array("Hollywood",array("hollywood"),"http://www.hollywood.com/search.aspx?s={searchTerms}"),
    #array("IMDB",array("imdb"),"http://www.imdb.com/find?s=all&q={searchTerms}&x=0&y=0"),
-   array("iPhone SDK",array("idev"),"http://developer.apple.com/iphone/search/search.php?simp=1&num=10&site=iphone&Search={search}"),
+   array("iPhone SDK",array("idev"),"http://developer.apple.com/iphone/search/search.php?simp=1&num=10&site=iphone&Search={searchTerms}"),
    array("JavaDocs",array("jd", "javadocs"), "http://javadocs.org/{searchTerms}/?t={searchTerms}"),
    array("Live.com",array("live"),"http://search.live.com/results.aspx?q={searchTerms}&go=&form=QBLH"),
    #array("Lonely Planet",array("lonelyplanet"),"http://search.lonelyplanet.com/search.do?Ntt={searchTerms}&x=0&y=0"),
