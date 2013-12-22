@@ -99,6 +99,8 @@ if (!$query) {
 </html>
 <?php
 } else {
+    http_response_code(303);
+
     # Parse query term into initial subquery and actual query text
     if (preg_match("/^([^\\s]+)\\s+(.*)$/", $query, $matches)) {
        # Extract relevant stuff from the regex gubbins
@@ -118,13 +120,13 @@ if (!$query) {
    
        # Redirect immediately if we recognised the template
        if ($template) {
-          http_redirect(str_replace("{searchTerms}", urlencode($subquery), $template));
+          header("Location: " . str_replace("{searchTerms}", urlencode($subquery), $template));
           return;
        }
     }
 
     # Default redirection
-    http_redirect("http://www.google.com/search?q=" . urlencode($query));
+    header("Location: http://www.google.com/search?q=" . urlencode($query));
 }
 
 ?>
